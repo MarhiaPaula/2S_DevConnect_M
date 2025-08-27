@@ -1,20 +1,20 @@
 /*1 forma de utilixar uma fonte*/
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');   
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*2 forma de utilixar uma fonte*/
 @font-face {
     font-family: Josefin Sans;
     src: url(../assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf),
-    url(../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+        url(../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
 }
 
- :root{
+:root {
     --cor-azul-escuro: #687a92;
     --cor-azul-claro: #8597A5;
     --cor-beje: #ECDFCC;
     --cor-azul: #E3CAAB;
-    --cor-azul: #C1AD94;
-    
+    --cor-beje1: #C1AD94;
+
     --borda: 1px solid var(--cor-escuro);
     --borda-arredondada: 2px;
 
@@ -22,23 +22,51 @@
     --tamanho-fonte-md: 16px;
     --tamanho-fonte-sm: 14px;
 
- }
+}
 
-*{
-    padding: 0; /*espaçamento interno*/
-    margin: 0; /*espaçamento externo*/
-    box-sizing: border-box; /*atribui espaços internos e externos e bordas no tamanho final do box*/
+* {
+    padding: 0;
+    /*espaçamento interno*/
+    margin: 0;
+    /*espaçamento externo*/
+    box-sizing: border-box;
+    /*atribui espaços internos e externos e bordas no tamanho final do box*/
     font-family: "Josefin Sans", sans-serif;
 }
 
-body{
+body {
     background-color: var(--cor-beje);
 }
 
-h1{
+h1 {
     position: absolute;
     z-index: -1;
     opacity: 0;
 
 }
- 
+
+/* formulario */
+.formulario-botao-azul {
+    background-color: var(--cor-azul-escuro);
+    border-radius: var(--borda-arredondada);
+    height: 35px;
+    color: var(--cor-beje);
+    font-size: var(--tamanho-fonte-sm);
+    border: none;
+}
+
+.formulario-campos>input {
+    border: var(--borda);
+    height: 35px;
+    background-color: var(--cor-beje);
+
+    color: var(--cor-beje);
+    font-size: var(--tamanho-fonte-sm);
+    border-radius: var(--borda-arredondada);
+}
+
+.formulario-campos > label{
+    font-size: var(--tamanho-fonte-sm);
+    color: var(--cor-azul);
+    font-weight: 600;
+}
