@@ -15,7 +15,7 @@
     --cor-azul: #E3CAAB;
     --cor-beje1: #C1AD94;
 
-    --borda: 1px solid var(--cor-escuro);
+    --borda: 1px solid #000;
     --borda-arredondada: 2px;
 
     --tamanho-fonte-lg: 20px;
@@ -32,6 +32,7 @@
     box-sizing: border-box;
     /*atribui espaços internos e externos e bordas no tamanho final do box*/
     font-family: "Josefin Sans", sans-serif;
+    outline-color: #C1AD94;
 }
 
 body {
@@ -65,8 +66,100 @@ h1 {
     border-radius: var(--borda-arredondada);
 }
 
-.formulario-campos > label{
+.formulario-campos>label {
     font-size: var(--tamanho-fonte-sm);
     color: var(--cor-azul);
     font-weight: 600;
+}
+
+.estilo-formulario {
+    background-color: var(--cor-azul-claro);
+    border: var(--borda);
+    width: 100%;
+
+}
+
+#campo-upload {
+    display: none;
+}
+
+
+#texto-upload{
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    min-height: 35px;
+    height: 35px;
+    background-color: var(--cor-azul);
+    padding: 5px;
+    border-radius: var(--borda-arredondada);
+    font-weight: 500;
+}
+
+.formulario-botao-cadastro {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-azul-escuro);
+    border: none;
+
+}
+
+/*cabecalho*/
+#cabecalho {
+    background-color: var(--cor-azul-claro);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-bottom: var(--borda);
+
+}
+
+#cabecalho>nav {
+    /* background-color: blueviolet; */
+    width: 85%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo-mobile {
+    display: none;
+}
+
+.cabecalho-acoes {
+    /* background-color: cadetblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+}
+
+.cabecalho-acoes>a {
+    display: flex;
+    align-items: center;
+
+}
+
+.foto-perfil {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+   
+}
+
+/* RESPONSIVO */
+@media only screen and (max-width: 500px){
+    #logo-mobile {
+        display: initial;
+    }
+
+    #logo-desktop{
+        display: none;
+    }
 }
