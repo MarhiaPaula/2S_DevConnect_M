@@ -153,6 +153,17 @@ h1 {
    
 }
 
+.foto-perfil-grande{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+   
+}
+
+
+
 /* RESPONSIVO */
 @media only screen and (max-width: 500px){
     #logo-mobile {
